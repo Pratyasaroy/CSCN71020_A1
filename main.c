@@ -7,30 +7,30 @@ void subtract();
 
 
 void main() {
-
-	printWelcomeMenu();
-
-	printOptions();
-
 	int inputNum;
-
-	printf("Enter operation number: ");
-	scanf_s("%d", &inputNum);
-
-	switch (inputNum)
+	while (1)
 	{
-	case 1:
-		add();
-		break;
-	case 2:
-		subtract();
-		break;
-	default:
-		printf("invalid operation\n");
-		break;
+		printWelcomeMenu();
+		printOptions();
+
+		printf("Enter operation number: ");
+		scanf_s("%d", &inputNum);
+
+		switch (inputNum)
+		{
+		case 1:
+			add();
+			break;
+		case 2:
+			printf("subtract not implemented yet.\n");
+			break;
+		default:
+			printf("invalid operation\n");
+			break;
+
+		}
 
 	}
-
 }
 
 void printWelcomeMenu() {
